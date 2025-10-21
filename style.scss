@@ -1,0 +1,144 @@
+@use 'variables' as *;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+// Ici on voit la premiere implémentation d'une fonctionnalité SASS. (Le nesting)
+// Le nesting est le fait de permettre de mettre du css DANS un autre sélecteur CSS (pas faisable par défaut)
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.25em;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  line-height: 3.25em;
+  text-transform: uppercase;
+  z-index: 1000;
+
+  .logo {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0 1.5em;
+    text-decoration: none;
+    color: white;
+
+    strong {
+      background-color: #fff;
+      color: #242943;
+      padding: 0 0.375em;
+      margin-right: 0.325em;
+      line-height: 1.65em;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #9bf1ff;
+      }
+
+      &:active {
+        background-color: #53e3fb;
+      }
+    }
+  }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: block;
+      font-size: 0.8em;
+      color: white;
+      padding: 0 0.75em;
+      text-decoration: none;
+    }
+}
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("images/banner.jpg") center / cover no-repeat;
+  height: 60vh;
+  color: $color-text;
+  text-align: left;
+
+  .inner {
+    width: 100%;
+    padding: 0em 5em;
+    hr {
+        border-top: 1px solid #ccc;
+        margin: 2rem 0;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    line-height: 1.05;
+  }
+
+  p {
+    font-size: 1.05rem;
+    margin: 0 0 1.25rem;
+    font-weight: 400;
+    opacity: 0.95;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content:space-between;
+    p {
+        margin: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+
+        }
+    } 
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.0);
+    color: white;
+    text-decoration: none;
+
+  }
+
+  @media (max-width: 736px) {
+    h1 { font-size: 2rem; }
+    p { font-size: 0.95rem; }
+    .btn--primary { padding-left: calc(0.75rem + 20px + 0.5rem); background-size: 20px 20px; }
+  }
+}
+
