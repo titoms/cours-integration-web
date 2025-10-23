@@ -1,0 +1,9 @@
+INSTALLATION ET MISE EN PLACE DE GIT :
+
+GIT est un outil utilisé en permanence lors de projet webs.
+Pour l'explication simple, c'est un système de sauvegardes de notre code (système de versionning).
+Il permet aussi a plusieurs collaborateurs de travailler sur le même ensemble de fichiers.
+
+INSTALLEZ :
+
+    Git + Github Desktop
